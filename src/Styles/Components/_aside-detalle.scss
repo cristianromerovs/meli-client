@@ -1,0 +1,22 @@
+.aside-detalle {
+    background-color: #f5f5f5;
+    min-height: 160px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .12));
+
+    .aside-detalle__title {
+        font-size: ($font-normal + 2px);
+        font-weight: 600;
+        color: $color-black-2;
+    }
+    .aside-detalle__fechaid {
+        font-size: ($font-normal - 2px);
+        font-weight: 400;
+        color: $color-gray-2;
+    }
+    .aside-detalle__detalle {
+        font-size: ($font-normal);
+        font-weight: 400;
+        color: $color-gray-2;
+    }
+}

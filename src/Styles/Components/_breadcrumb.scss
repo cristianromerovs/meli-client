@@ -1,0 +1,22 @@
+ol {
+    .breadcrumb {
+        margin-top: 16px;
+
+        .breadcrumb-item {
+            color: $color-gray-2;
+            font-size: $font-normal;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .breadcrumb-item + .breadcrumb-item {
+            &::before {
+                content: '>' !important;
+            }
+        }
+        
+
+        .active {
+            font-weight: 600;
+        }
+    }
+}

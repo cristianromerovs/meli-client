@@ -1,0 +1,26 @@
+.footer-ml {
+    background-color: $color-white;
+    min-height: 86px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px 0;
+
+    @include mq-md {
+        position: relative;
+    }
+
+    .footer__top-item,
+    .footer__bottom-item  {
+        padding: 0 8px;
+        text-decoration: none;
+    }
+    .footer__top-item {
+        font-size: ($font-normal - 1px);
+        color: $color-black-3;
+    }
+    .footer__bottom-item {
+        font-size: ($font-normal - 2px);
+        color: $color-gray-2;
+    }
+}

@@ -1,0 +1,88 @@
+//Colores
+$color-main: #fff159;
+$color-blue: #3483fa;
+$color-green: #00a650;
+$color-black: #33333399;
+$color-black-2: #000000e6;
+$color-black-3: #333;
+$color-gray: #ededed;
+$color-gray-2: #0000008c;
+$color-white: #fff;
+
+//Font-Sizes
+$font-normal: 14px;
+
+//Media queries
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1400px;
+
+@mixin sm-md {
+    @media only screen and (min-width: $screen-sm-min) {
+        @content;
+    }
+}
+@mixin mq-md {
+    @media only screen and (min-width: $screen-md-min) {
+        @content;
+    }
+}
+@mixin mq-lg {
+    @media only screen and (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+@mixin mq-xl {
+    @media only screen and (min-width: $screen-xl-min) {
+        @content;
+    }
+}
+@mixin mq-xxl {
+    @media only screen and (min-width: $screen-xxl-min) {
+        @content;
+    }
+}
+
+//Mixin Cards
+@mixin card-ml {
+    background-color: $color-white;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .12));
+}
+
+//Mixin placeholder
+@mixin img-placeholder {
+    background-color: $color-gray;
+    border-radius: 50%;
+    animation: placeholderGlow 2s ease-in-out infinite;
+
+    @keyframes placeholderGlow {
+        from {
+            opacity: 1;
+        }
+        25% {
+            opacity: .75;
+        }
+        50% {
+            opacity: .5;
+        }
+        75% {
+            opacity: .25;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+//Inicializaciones
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0 !important;
+}
+body {
+    background-color: $color-gray !important;
+}

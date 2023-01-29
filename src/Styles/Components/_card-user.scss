@@ -1,0 +1,36 @@
+.card-user {
+    @include card-ml;
+
+    .img-placeholder {
+        @include img-placeholder;
+        height: 68px;
+        width: 68px;
+    }
+    .img-user {
+        height: 68px;
+        width: 68px;
+        border-radius: 50%;
+        border: 0.125rem solid $color-blue;
+        padding: 2px;
+    }
+
+    .card-user__nivel,
+    .card-user__restricciones,
+    .card-user__nick {
+        color: $color-black-2;
+        font-size: $font-normal;
+        font-weight: 400;
+    }
+
+    .card-user__restricciones {
+        color: $color-gray-2;
+        font-size: ($font-normal - 1px);
+        font-style: italic;
+    }
+
+    .card-user__nombre {
+        color: $color-black-2;
+        font-size: $font-normal + 2px;
+        font-weight: 600;
+    }
+}
