@@ -1,7 +1,7 @@
-export const moneyFormatter = (valor) => {
+export const moneyFormatter = (valor, moneda) => {
     const formatter = new Intl.NumberFormat('es-AR', {
         style: 'currency',
-        currency: 'ARP',
+        currency: moneda,
         minimumFractionDigits: 0,
         maximumFractionDigits: 0
     })

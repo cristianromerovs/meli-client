@@ -63,7 +63,7 @@ export const CardCompras = () => {
             </Col>
             <Col xs={12} md={3}>
               <p className="card-compras__precio">
-                Precio producto: {moneyFormatter(element.precio.total)}
+                Precio producto: {moneyFormatter(element.precio.total, 'ARS')}
               </p>
               <p className="card-compras__cantidad">
                 Cantidad: {element.cantidad}

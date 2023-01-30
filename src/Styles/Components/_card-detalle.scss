@@ -12,6 +12,10 @@
         font-size: $font-normal;
         color: $color-green;
         font-weight: 600;
+    }  
+
+    .card-detalle__estado-envio.shipment-red {
+        color: $color-red;
     }   
 
     .card-detalle__titulo-item {

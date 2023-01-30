@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { QueryClientProvider, QueryClient } from "react-query"
+import { ReactQueryDevtools } from "react-query/devtools"
 
 import { MyNav } from './Components/MyNav'
 import { Compras } from './Pages/Compras'
@@ -22,6 +23,7 @@ function App() {
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />
+      <ReactQueryDevtools initialIsOpen={false} position={'bottom-right'} />
     </QueryClientProvider>
   )
 }
