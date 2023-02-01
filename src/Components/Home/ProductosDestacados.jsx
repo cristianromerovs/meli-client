@@ -33,8 +33,8 @@ export const ProductosDestacados = () => {
     <Container>
         <Row>
             {productList.map(item => (
-                <Col xs={6} md={3}>
-                <Card className="card-destacados align-items-center my-5 mx-4">
+                <Col xs={12} md={3}>
+                <Card className="card-destacados align-items-center my-3 my-md-5 mx-3 mx-md-4">
                     <div className="card-destacados__img">
                         <Card.Img src={item.img} />
                     </div>

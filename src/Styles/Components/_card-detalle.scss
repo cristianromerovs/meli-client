@@ -7,7 +7,6 @@
         height: 120px;
         width: 120px;
     }
-
     .img-producto {
         height: 90px;
         width: 90px;
@@ -23,49 +22,41 @@
             padding: 10px;
         }
     }
-
     .card-detalle__estado-envio {
         font-size: $font-normal;
         color: $color-green;
         font-weight: 600;
     }  
-
     .card-detalle__estado-envio.shipment-red {
         color: $color-red;
     }   
-
     .card-detalle__titulo-item {
         font-size: ($font-normal + 4px);
         color: $color-black-2;
         font-weight: 600;
     }
-
     .card-detalle__fecha {
         font-size: $font-normal;
         color: $color-black-2;
         font-weight: 400;
     }
-
     .card-detalle__cantidad-item {
         font-size: $font-normal;
         color: $color-gray-2;
         font-weight: 400;
     }
-
     .card-detalle__vendedor {
         .img-placeholder {
             @include img-placeholder;
             height: 50px;
             width: 50px;
         }
-
         .btn-mensajes {
             width: 120px;
             color: $color-blue;
             font-size: $font-normal;
             text-decoration: none;
         }
-
         .card-detalle__vendedor-name {
             font-size: $font-normal;
             font-weight: 600;

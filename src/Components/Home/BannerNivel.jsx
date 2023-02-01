@@ -4,7 +4,7 @@ import Row from "react-bootstrap/esm/Row";
 
 export const BannerNivel = () => {
   return (
-    <Container className="mb-5">
+    <Container className="mb-3 mb-md-5">
         <Row>
             <Col xs={12} className='banner-nivel px-4'>
                 <p className="banner-nivel__titulo">Suscríbete al nivel 6</p>

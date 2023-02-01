@@ -10,7 +10,6 @@
             color: $color-black-2;
         }
     }
-
     .card-compras__id,
     .card-compras__nombre,
     .card-compras__cantidad {
@@ -18,13 +17,11 @@
         font-size: $font-normal;
         font-weight: 400;
     }
-
     .card-compras__precio {
         color: $color-black-2;
         font-size: ($font-normal + 2px);
         font-weight: 600;
     }
-
     .btn__ver-compra {
         background-color: $color-blue;
         color: $color-white;

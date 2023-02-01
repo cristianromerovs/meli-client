@@ -5,20 +5,22 @@
     height: 80px;
     display: flex;
     align-items: center;
-    border-radius: 6px;
     justify-content: space-between;
 
     .banner-nivel__titulo {
         font-weight: 500;
-        font-size: $font-big;
-    }
+        font-size: ($font-big - 4px);
 
+        @include mq-md {
+            font-size: $font-big;
+            border-radius: 6px;
+        }
+    }
     .banner-nivel__antes {
         font-size: $font-normal;
         font-weight: 400;
         text-decoration: line-through;
     }
-
     .banner-nivel__despues {
         font-size: $font-big;
         font-weight: 400;
@@ -27,5 +29,4 @@
             font-size: $font-normal;
         }
     }
-    
 }

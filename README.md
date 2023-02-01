@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Challenge Mercado libre
+## Introducción 🔍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El desafío de este challenge es crear una solucion completa (Front end y Back end) para consumir los servicios de **MercadolibreService** entregados, para esto se utilizaron librerias, dependencias y frameworks como: Node js, Express, React, Sass, React-Bootstrap, entre otras.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Instrucciones 📝
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este proyecto cuenta con dos partes separadas, las cuales ambas cuentan con su propio repositorio:
+- [Front end (Cliente)](https://github.com/cristianromerovs/meli-client.git)
+- [Back end (Servidor)](https://github.com/cristianromerovs/challenge-mercadolibre-server.git)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ¿Por qué el proyecto esta en dos repositorios distintos? 💬
+_- Para hacer el proyecto mas limpio y mas facil de revisar, ya que este requiere tener dos puertos abiertos al mismo tiempo y cada lado (client y sv) tienen sus propias depentencias y scrpts._
 
-### `npm test`
+### Comencemos la instalación ⚙️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Creamos una carpeta en nuestro lugar de trabajo y le damos un nombre. Ej: "challenge-meli",
+si estamos en **Linux/Mac** podemos utilizar el siguiente comando con nuestro terminal:
+`mkdir challenge-meli`
+Luego debemos ingresar a la carpeta recién creada, podemos utilizar:
+`cd challenge-meli`
+Una vez estemos dentro de nuestra carpeta haremos git clone a ambos repositorios usando:
+`git clone https://github.com/cristianromerovs/meli-client.git`
+`git clone https://github.com/cristianromerovs/challenge-mercadolibre-server.git`
 
-### `npm run build`
+#### Iniciar el proyecto 🚗
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para poder iniciar el proyecto debemos dirigirnos a nuestra carpeta de **server** usando
+`cd server`
+Una vez adentro del servidor ejecutamos los siguientes comandos:
+- Para instalar todas las dependencias del servidor `npm i`
+- Para iniciar el servidor de express podemos usar `npm run server`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para iniciar el cliente debemos hacer los siguientes pasos:
+- Abrir una nueva pestaña en del terminal
+- Navegamos hasta la carpeta de cliente usando `cd`
+- Una vez dentro del cliente instalamos las dependencias `npm i`
+- Y finalmente podemos arrancar el proyecto usando `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Note:Si tienes dificultad para arrancar el proyecto no dudes en enviarme un email
+<cristianromerovs@gmail.com> ✉️

@@ -1,9 +1,17 @@
 export const moneyFormatter = (valor, moneda) => {
-    const formatter = new Intl.NumberFormat('es-AR', {
-        style: 'currency',
-        currency: moneda,
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    })
-    return formatter.format(valor) 
+    try {
+        if (typeof valor !== 'number') {
+            throw new Error('El valor debe ser de tipo Number')
+        } else {
+            const formatter = new Intl.NumberFormat('es-AR', {
+                style: 'currency',
+                currency: moneda,
+                maximumFractionDigits: 0
+            });
+
+            return formatter.format(valor) 
+        }
+    } catch (error) {
+        console.log(error);
+    } 
 }

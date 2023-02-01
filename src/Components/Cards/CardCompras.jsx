@@ -97,7 +97,7 @@ export const CardCompras = () => {
           </Row>
         </Container>
       ))}
-      <div className="paginador my-5">
+      <div className="paginador my-3 my-md-5">
         {arrayPaginas.map((element, index) => (
           <button
             className="btn btn-paginador"
