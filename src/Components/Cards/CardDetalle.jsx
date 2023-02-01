@@ -37,7 +37,7 @@ export const CardDetalle = () => {
   }, []);
 
   return !load ? (
-    <Col xs={12} md={8}>
+    <Col xs={12} md={8} className='mb-md-5'>
       <div className="card-detalle p-3">
         <Placeholder as="p" animation="glow">
           <Placeholder xs={12} />
@@ -61,7 +61,7 @@ export const CardDetalle = () => {
       </div>
     </Col>
   ) : (
-      <Col xs={12} md={8}>
+      <Col xs={12} md={8} className='mb-md-5'>
         <div className="card-detalle p-3">
           <div className="d-flex d-flex justify-content-between align-items-center">
             <div className="d-flex flex-column">
