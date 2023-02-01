@@ -1,0 +1,31 @@
+.banner-nivel {
+    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    color: $color-white;
+    padding: 16px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: space-between;
+
+    .banner-nivel__titulo {
+        font-weight: 500;
+        font-size: $font-big;
+    }
+
+    .banner-nivel__antes {
+        font-size: $font-normal;
+        font-weight: 400;
+        text-decoration: line-through;
+    }
+
+    .banner-nivel__despues {
+        font-size: $font-big;
+        font-weight: 400;
+        
+        & span {
+            font-size: $font-normal;
+        }
+    }
+    
+}

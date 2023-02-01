@@ -1,0 +1,45 @@
+.card.card-destacados {
+    border-radius: 4px;
+    background-color: $color-white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+        box-shadow: 0 7px 16px 0 rgb(0 0 0 / 20%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+    }
+
+    .card-body {
+        border-top: 1px solid rgba(51,51,51,.1);
+        padding: 16px;
+        width: 100%;
+    }
+
+    .card-destacados__img {
+        display: flex;
+        width: 224px;
+        height: 224px;
+
+        & img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .card-destacados__precio {
+        font-size: $font-big;
+        color: $color-black-2;
+        font-weight: 400;
+    }
+    .card-destacados__cuotas {
+        font-size: $font-normal;
+        color: $color-green;
+        font-weight: 400;
+    }
+    .card-destacados__titulo {
+        font-size: $font-normal;
+        color: $color-gray-2;
+        font-weight: 400;
+    }
+}

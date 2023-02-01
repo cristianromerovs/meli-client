@@ -8,6 +8,22 @@
         width: 120px;
     }
 
+    .img-producto {
+        height: 90px;
+        width: 90px;
+        border: 1px solid rgba(0,0,0,.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+
+        img {
+            width: auto;
+            height: 100%;
+            padding: 10px;
+        }
+    }
+
     .card-detalle__estado-envio {
         font-size: $font-normal;
         color: $color-green;

@@ -1,0 +1,15 @@
+.paginador {
+    display: flex;
+    justify-content: center;
+
+    .btn-paginador {
+        height: 32px;
+        width: 32px;
+        border: none;
+        color: $color-gray-4;
+
+        &.active {
+            color: $color-black-2;
+        }
+    }
+}

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Placeholder from 'react-bootstrap/Placeholder';
 
-//Servicio para obtener data desde GetUser
-import { getUserInfo, getUserRestrictions } from "../../Services/getUser";
+import { getUserInfo } from "../../Services/getUser";
 
 export const CardUser = () => {
   //Estados de: carga info, info usuario y info restricciones
@@ -14,12 +15,11 @@ export const CardUser = () => {
 
   useEffect(() => {
     getUserInfo();
-    getUserRestrictions();
-
-    Promise.all([getUserInfo(), getUserRestrictions(), setUser()])
+    Promise.all([getUserInfo()])
       .then((data) => {
-        setUser(data[0]);
-        setUserRestrictions(data[1]);
+        const [userData, envioData] = data[0];
+        setUser(userData);
+        setUserRestrictions(envioData);
         setLoad(true);
       })
       .catch((error) => console.log(error));
@@ -29,12 +29,15 @@ export const CardUser = () => {
   return ( !load ? (
     <Container className="card-user p-3">
       <Row>
-        <Col xs={3} md={2} className="d-flex flex-column align-items-center">
-          <div className="img-placeholder"></div>
-        </Col>
-        <Col xs={9} md={10} className='d-flex align-items-center'>
-          <p className="card-user__nombre">Cargando información de usuario...</p>
-        </Col>
+        <Placeholder as="p" animation="glow">
+          <Placeholder xs={4} />
+        </Placeholder>
+        <Placeholder as="p" animation="glow">
+          <Placeholder xs={6} />
+        </Placeholder>
+        <Placeholder as="p" animation="glow">
+          <Placeholder xs={8} />
+        </Placeholder>
       </Row>
     </Container>
   ) : (

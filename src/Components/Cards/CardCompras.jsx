@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Placeholder from "react-bootstrap/Placeholder";
 
-import { moneyFormatter } from "../../Services/moneyFormatter";
-import { dateFormatter } from "../../Services/dateFormatter";
+import { moneyFormatter } from "../../Utils/moneyFormatter";
+import { dateFormatter } from "../../Utils/dateFormatter";
 
 export const CardCompras = () => {
   const [page, setPage] = useState(0);
-  const API_ROUTE = process.env.REACT_APP_API_ROUTE
+  const API_ROUTE = process.env.REACT_APP_API_ROUTE;
+  const productPlaceholder = 5;
 
   const getProducts = async ({ queryKey }) => {
     /* QueryKey en la posicion [1] nos trae 'page', esto se utiliza
@@ -29,7 +31,19 @@ export const CardCompras = () => {
   const { data, status } = useQuery(["products", page], getProducts);
 
   if (status === "loading") {
-    return <p>Obteniendo informacion...</p>;
+    return Array.apply(null, { length: productPlaceholder }).map((e, i) => (
+      <Container key={i} className="card-compras my-3">
+        <Row className="card-compras__fecha p-3">
+          <Placeholder as="p" animation="glow">
+            <Placeholder xs={3} />
+          </Placeholder>
+          <Placeholder as="p" animation="glow">
+            <Placeholder xs={7} /> <Placeholder xs={4} />
+            <Placeholder xs={6} /> <Placeholder xs={8} />
+          </Placeholder>
+        </Row>
+      </Container>
+    ));
   }
   if (status === "error") {
     return <p>Error</p>;
@@ -44,8 +58,7 @@ export const CardCompras = () => {
 
   return (
     <div>
-      {
-      productItems.map((element, index) => (
+      {productItems.map((element, index) => (
         <Container key={index} className="card-compras my-3">
           <Row className="card-compras__fecha p-3">
             <Col xs={12}>
@@ -63,7 +76,7 @@ export const CardCompras = () => {
             </Col>
             <Col xs={12} md={3}>
               <p className="card-compras__precio">
-                Precio producto: {moneyFormatter(element.precio.total, 'ARS')}
+                Precio producto: {moneyFormatter(element.precio.total, "ARS")}
               </p>
               <p className="card-compras__cantidad">
                 Cantidad: {element.cantidad}
@@ -84,11 +97,19 @@ export const CardCompras = () => {
           </Row>
         </Container>
       ))}
-      {arrayPaginas.map((element, index) => (
-        <button key={element} onClick={() => setPage(index * 5)}>
-          {element}
-        </button>
-      ))}
+      <div className="paginador my-5">
+        {arrayPaginas.map((element, index) => (
+          <button
+            className="btn btn-paginador"
+            type="button"
+            key={element}
+            data-bs-toggle="button"
+            onClick={() => setPage(index * 5)}
+          >
+            {element}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
