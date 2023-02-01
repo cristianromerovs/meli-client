@@ -28,6 +28,7 @@ Luego debemos ingresar a la carpeta recién creada, podemos utilizar:
 Una vez estemos dentro de nuestra carpeta haremos git clone a ambos repositorios usando:
 
 `git clone https://github.com/cristianromerovs/meli-client.git`
+
 `git clone https://github.com/cristianromerovs/challenge-mercadolibre-server.git`
 
 #### Iniciar el proyecto 🚗
