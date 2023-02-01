@@ -61,45 +61,45 @@ export const CardDetalle = () => {
       </div>
     </Col>
   ) : (
-    <Col xs={12} md={8}>
-      <div className="card-detalle p-3">
-        <div className="d-flex d-flex justify-content-between align-items-center">
-          <div className="d-flex flex-column">
-            {shipment.estado === "cancelado" ? (
-              <p className="card-detalle__estado-envio mb-3 shipment-red">
-                {capitalizeFirstLetter(shipment.estado)}
-              </p>
-            ) : (
-              <p className="card-detalle__estado-envio mb-3">
-                {capitalizeFirstLetter(shipment.estado)}
-              </p>
-            )}
+      <Col xs={12} md={8}>
+        <div className="card-detalle p-3">
+          <div className="d-flex d-flex justify-content-between align-items-center">
+            <div className="d-flex flex-column">
+              {shipment.estado === "cancelado" ? (
+                <p className="card-detalle__estado-envio mb-3 shipment-red">
+                  {capitalizeFirstLetter(shipment.estado)}
+                </p>
+              ) : (
+                <p className="card-detalle__estado-envio mb-3">
+                  {capitalizeFirstLetter(shipment.estado)}
+                </p>
+              )}
 
-            <p className="card-detalle__titulo-item mb-2">{product.titulo}</p>
-            <p className="card-detalle__fecha mb-2">
-              {dateFormatter(product.fecha)}
-            </p>
-            <p className="card-detalle__cantidad-item mb-2">
-              Cantidad: {product.cantidad}
-            </p>
+              <p className="card-detalle__titulo-item mb-2">{product.titulo}</p>
+              <p className="card-detalle__fecha mb-2">
+                {dateFormatter(product.fecha)}
+              </p>
+              <p className="card-detalle__cantidad-item mb-2">
+                Cantidad: {product.cantidad}
+              </p>
+            </div>
+            <div className="img-producto">
+              <img src={product.imagen} alt={`imagen de ${product.titulo}`} />
+            </div>
           </div>
-          <div className="img-producto">
-            <img src={product.imagen} alt={`imagen de ${product.titulo}`} />
+          <hr />
+          <div className="card-detalle__vendedor d-flex align-items-center">
+            <div className="img-placeholder"></div>
+            <div className="d-flex flex-column ms-3">
+              <p className="card-detalle__vendedor-name">
+                {product.vendedor.nickname}
+              </p>
+              <Link className="btn-mensajes" to={"/"}>
+                Ver mensajes
+              </Link>
+            </div>
           </div>
         </div>
-        <hr />
-        <div className="card-detalle__vendedor d-flex align-items-center">
-          <div className="img-placeholder"></div>
-          <div className="d-flex flex-column ms-3">
-            <p className="card-detalle__vendedor-name">
-              {product.vendedor.nickname}
-            </p>
-            <Link className="btn-mensajes" to={"/"}>
-              Ver mensajes
-            </Link>
-          </div>
-        </div>
-      </div>
-    </Col>
+      </Col>
   );
 };
