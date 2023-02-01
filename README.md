@@ -7,21 +7,26 @@ El desafío de este challenge es crear una solucion completa (Front end y Back e
 
 ## Instrucciones 📝
 
-Este proyecto cuenta con dos partes separadas, las cuales ambas cuentan con su propio repositorio:
+Este proyecto cuenta con dos partes separadas, las cuales ambas cuentan con su propios repositorios:
 - [Front end (Cliente)](https://github.com/cristianromerovs/meli-client.git)
 - [Back end (Servidor)](https://github.com/cristianromerovs/challenge-mercadolibre-server.git)
 
 ### ¿Por qué el proyecto esta en dos repositorios distintos? 💬
-_- Para hacer el proyecto mas limpio y mas facil de revisar, ya que este requiere tener dos puertos abiertos al mismo tiempo y cada lado (client y sv) tienen sus propias depentencias y scrpts._
+_- Para hacer el proyecto mas limpio y mas facil de revisar, ya que este requiere tener dos puertos abiertos al mismo tiempo y cada lado (client y sv) tienen sus propias depentencias y scripts._
 
 ### Comencemos la instalación ⚙️
 
 Creamos una carpeta en nuestro lugar de trabajo y le damos un nombre. Ej: "challenge-meli",
 si estamos en **Linux/Mac** podemos utilizar el siguiente comando con nuestro terminal:
+
 `mkdir challenge-meli`
+
 Luego debemos ingresar a la carpeta recién creada, podemos utilizar:
+
 `cd challenge-meli`
+
 Una vez estemos dentro de nuestra carpeta haremos git clone a ambos repositorios usando:
+
 `git clone https://github.com/cristianromerovs/meli-client.git`
 `git clone https://github.com/cristianromerovs/challenge-mercadolibre-server.git`
 
