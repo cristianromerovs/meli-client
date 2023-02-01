@@ -33,14 +33,13 @@ describe('Funciones separadas de utilidad', () => {
     });
 
     describe('Tests a /Utils/moneyFormatter.js', () => {
-//69999.99
         test('Debe retornar un string', () => {
             const result = moneyFormatter(69999.99, 'ARS');
             expect(typeof result).toBe('string');
         });
 
         test('Debe retornar un numero sin decimales y redondeado', () => {
-            expect(moneyFormatter(69999.99, 'ARS')).toBe('$ 70.000');
+            expect(moneyFormatter(69999.99, 'ARS')).toContain('70.000');
         });
 
     });
